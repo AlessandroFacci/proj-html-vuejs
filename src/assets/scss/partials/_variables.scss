@@ -1,8 +1,10 @@
 // header
-$bg-nav: #060607;
-$text-nav-logo: #e1e1e1;
-$text-nav-link: #978c8f;
-$bg-nav-popup: #fff940;
+:root {
+  --bg-nav: #060607;
+  --text-nav-link: #978c8f;
+  --hover-nav-link: white;
+  --bg-nav-popup: #fff940;
 
-//button
-$bg-button-blue: #4153ff;
+  //button
+  --bg-button-blue: #4153ff;
+}
