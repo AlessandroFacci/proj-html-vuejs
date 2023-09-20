@@ -4,15 +4,21 @@ import AppCard from "./AppCard.vue";
 export default {
   data() {
     return {
-      imgServices: [
+      imgesServices: [
         {
           path: "../../public/img/service6-2x.jpg",
+          title: "Crossfit woukout",
+          underTitle: "Push your limits",
         },
         {
           path: "../../public/img/box1-2x.jpg",
+          title: "New gym apparel",
+          underTitle: "Look good, feel good",
         },
         {
           path: "../../public/img/box3-2x.jpg",
+          title: "Team training",
+          underTitle: "Find a partner",
         },
       ],
     };
@@ -26,7 +32,7 @@ export default {
 <template>
   <div class="hero">
     <div class="slider d-flex align-items-center">
-      <div class="container-fluid">
+      <div class="container-fluid position-relative">
         <h5>Certified fitness professional</h5>
         <h1>Take control o your health</h1>
         <div class="line"></div>
@@ -48,8 +54,14 @@ export default {
         </button>
       </div>
     </div>
-    <div class="container-fluid service">
-      <AppCard></AppCard>
+    <div class="service">
+      <div class="container-fluid position-relative">
+        <div class="card-container">
+          <div class="d-flex justify-content-between">
+            <AppCard v-for="img in imgesServices" :cardInfo="img"></AppCard>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -63,7 +75,7 @@ export default {
     height: 50%;
     background-image: url("../../public/img/slider82x-scaled.jpg");
     background-size: cover;
-    position: relative;
+
     h5 {
       color: var(--text-color-red);
       margin-bottom: 1rem;
@@ -86,8 +98,8 @@ export default {
       height: 70px;
       border-radius: 50%;
       position: absolute;
-      right: 19rem;
-      bottom: 15.5rem;
+      right: 0;
+      bottom: 3.5rem;
     }
     .fa-play {
       color: var(--color-play);
@@ -103,6 +115,11 @@ export default {
     width: 100%;
     height: 50%;
     background-color: #9e0746;
+    .card-container {
+      width: 100%;
+      position: absolute;
+      top: -4rem;
+    }
   }
 }
 </style>
