@@ -9,7 +9,8 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
-library.add(faCartShopping, faMagnifyingGlass, faPlay);
+import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+library.add(faCartShopping, faMagnifyingGlass, faYoutube, faPlay);
 
 // app
 import { createApp } from "vue";
