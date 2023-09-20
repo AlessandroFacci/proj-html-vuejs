@@ -1,7 +1,12 @@
 <script>
+import AppCard from "./AppCard.vue";
+
 export default {
   data() {
     return {};
+  },
+  components: {
+    AppCard,
   },
 };
 </script>
@@ -31,7 +36,9 @@ export default {
         </button>
       </div>
     </div>
-    <div class="container-fluid service"></div>
+    <div class="container-fluid service">
+      <AppCard></AppCard>
+    </div>
   </div>
 </template>
 
@@ -43,7 +50,6 @@ export default {
     width: 100%;
     height: 50%;
     background-image: url("../../public/img/slider82x-scaled.jpg");
-    object-fit: inherit;
     background-size: cover;
     position: relative;
     h5 {
