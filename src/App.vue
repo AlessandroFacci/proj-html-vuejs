@@ -15,7 +15,9 @@ export default {
 };
 </script>
 
-<template></template>
+<template>
+  <AppHeader></AppHeader>
+</template>
 
 <style lang="scss">
 @use "./assets/scss/style.scss" as *;
