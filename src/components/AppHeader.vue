@@ -78,9 +78,6 @@ export default {
 
 <style lang="scss" scoped>
 nav {
-  .container-fluid {
-    width: 1000px;
-  }
   background-color: var(--bg-nav);
   ul {
     list-style-type: none;
