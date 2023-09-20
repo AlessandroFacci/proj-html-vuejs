@@ -10,7 +10,7 @@ export default {
   <div class="hero">
     <div class="slider d-flex align-items-center">
       <div class="container-fluid">
-        <h6>Certified fitness professional</h6>
+        <h5>Certified fitness professional</h5>
         <h1>Take control o your health</h1>
         <div class="line"></div>
         <p>
@@ -18,15 +18,20 @@ export default {
           dolor sit amet
         </p>
         <div>
-          <button></button>
-          <button></button>
+          <button class="btn btn-primary hero-button">
+            <font-awesome-icon icon="fa-brands fa-youtube" />
+            Visit my YouTube channel
+          </button>
+          <button class="btn btn-outline-light hero-button">
+            Buy Avada today
+          </button>
         </div>
         <button type="button" class="btn btn-light btn-circle">
           <font-awesome-icon icon="fa-solid fa-play" />
         </button>
       </div>
     </div>
-    <div class="container-fluid"></div>
+    <div class="container-fluid service"></div>
   </div>
 </template>
 
@@ -34,7 +39,6 @@ export default {
 .hero {
   width: 100%;
   height: 1000px;
-  background-color: red;
   .slider {
     width: 100%;
     height: 50%;
@@ -42,14 +46,22 @@ export default {
     object-fit: inherit;
     background-size: cover;
     position: relative;
-    h6 {
+    h5 {
       color: var(--text-color-red);
+      margin-bottom: 1rem;
     }
     h1 {
       color: var(--text-color-white);
+      margin-bottom: 1rem;
+    }
+    .line {
+      width: 3rem;
+      border: 1px solid var(--line-color);
+      margin-bottom: 1rem;
     }
     p {
       color: var(--text-color-gray);
+      margin-bottom: 1rem;
     }
     .btn-circle {
       width: 70px;
@@ -62,10 +74,17 @@ export default {
     .fa-play {
       color: var(--color-play);
     }
+    .hero-button {
+      padding: 0.5rem 1rem;
+      border-radius: 3rem;
+      font-size: 0.5rem;
+      margin-right: 1rem;
+    }
   }
-  .line {
-    width: 3rem;
-    border: 1px solid var(--line-color);
+  .service {
+    width: 100%;
+    height: 50%;
+    background-color: #9e0746;
   }
 }
 </style>
