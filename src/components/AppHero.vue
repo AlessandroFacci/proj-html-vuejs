@@ -3,7 +3,19 @@ import AppCard from "./AppCard.vue";
 
 export default {
   data() {
-    return {};
+    return {
+      imgServices: [
+        {
+          path: "../../public/img/service6-2x.jpg",
+        },
+        {
+          path: "../../public/img/box1-2x.jpg",
+        },
+        {
+          path: "../../public/img/box3-2x.jpg",
+        },
+      ],
+    };
   },
   components: {
     AppCard,
