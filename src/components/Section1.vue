@@ -180,11 +180,11 @@ export default {
   .playlist {
     width: 100%;
     height: 45%;
-    background-color: aquamarine;
     .playlist-container {
       display: flex;
       justify-content: space-between;
-      margin-top: 10rem;
+      padding-top: 10rem;
+      margin-bottom: 2rem;
     }
   }
 }
