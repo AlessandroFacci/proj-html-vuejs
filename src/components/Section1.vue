@@ -1,7 +1,30 @@
 <script>
+import AppCard2 from "./AppCard2.vue";
+
 export default {
   data() {
-    return {};
+    return {
+      playlists: [
+        {
+          image: "../../public/img/video2-2x.jpg",
+          title: "Things & glute workout",
+          description: "Increase your mobility",
+        },
+        {
+          image: "../../public/img/video7-2x.jpg",
+          title: "Lift, firm & perk up",
+          description: "Feel young again",
+        },
+        {
+          image: "../../public/img/video9-2x.jpg",
+          title: "Slim & trim your waist",
+          description: "Shed those extra pounds",
+        },
+      ],
+    };
+  },
+  components: {
+    AppCard2,
   },
 };
 </script>
@@ -47,7 +70,18 @@ export default {
         </div>
       </div>
     </div>
-    <div class="playlist"></div>
+    <div class="playlist">
+      <div class="container-fluid playlist-container">
+        <h4>Feattured playlists</h4>
+        <span
+          >View all videos
+          <font-awesome-icon icon="fa-solid fa-angle-right" />
+        </span>
+      </div>
+      <div class="container-fluid d-flex justify-content-between">
+        <AppCard2 v-for="img in playlists" :cardInfo="img"></AppCard2>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -147,6 +181,11 @@ export default {
     width: 100%;
     height: 45%;
     background-color: aquamarine;
+    .playlist-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10rem;
+    }
   }
 }
 </style>
