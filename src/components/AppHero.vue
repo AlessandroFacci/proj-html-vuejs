@@ -55,10 +55,35 @@ export default {
       </div>
     </div>
     <div class="service">
-      <div class="container-fluid position-relative">
-        <div class="card-container">
-          <div class="d-flex justify-content-between">
-            <AppCard v-for="img in imgesServices" :cardInfo="img"></AppCard>
+      <div class="img-service">
+        <div class="container-fluid position-relative">
+          <div class="card-container">
+            <div class="d-flex justify-content-between">
+              <AppCard v-for="img in imgesServices" :cardInfo="img"></AppCard>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="text-service container-fluid">
+          <h2>
+            "How you respond to the challenge in the second half will determine
+            what you become after the game, whether you are a winner or a
+            loser."
+          </h2>
+          <div class="line"></div>
+          <div class="icon-service">
+            <ul>
+              <li>
+                <div class="icon-circle"></div>
+              </li>
+              <li>
+                <span>Brad Johnson</span>
+              </li>
+              <li>
+                <span class="place">Las Vegas</span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -69,10 +94,10 @@ export default {
 <style lang="scss" scoped>
 .hero {
   width: 100%;
-  height: 1000px;
+  height: 1200px;
   .slider {
     width: 100%;
-    height: 50%;
+    height: 40%;
     background-image: url("../../public/img/slider82x-scaled.jpg");
     background-size: cover;
 
@@ -113,12 +138,59 @@ export default {
   }
   .service {
     width: 100%;
-    height: 50%;
+    height: 60%;
     background-color: #9e0746;
-    .card-container {
-      width: 100%;
-      position: absolute;
-      top: -4rem;
+
+    .img-service {
+      height: 50%;
+      .card-container {
+        width: 100%;
+        position: absolute;
+        top: -4rem;
+      }
+    }
+    .text-service {
+      width: 45%;
+      height: 50%;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h2 {
+        text-align: center;
+        color: var(--title-card-hero);
+        margin-bottom: 2rem;
+      }
+
+      .line {
+        width: 3rem;
+        border: 1px solid var(--line-color);
+        margin-bottom: 1rem;
+      }
+      .icon-service {
+        ul {
+          list-style-type: none;
+          display: flex;
+          align-items: center;
+          li {
+            margin: 0 0.5rem;
+            .icon-circle {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              background-image: url("../../public/img/avatar-1-2x.jpg");
+              background-size: cover;
+            }
+            span {
+              color: var(--title-card-hero);
+            }
+            span.place {
+              color: var(--text-color-gray);
+            }
+          }
+        }
+      }
     }
   }
 }
