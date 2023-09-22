@@ -1,6 +1,4 @@
 <script>
-import AppCard3 from "./AppCard3.vue";
-
 export default {
   data() {
     return {};
