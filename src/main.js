@@ -11,7 +11,19 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
-library.add(faCartShopping, faMagnifyingGlass, faYoutube, faPlay, faAngleRight);
+import { faDumbbell } from "@fortawesome/free-solid-svg-icons";
+import { faClock } from "@fortawesome/free-regular-svg-icons";
+import { faPerson } from "@fortawesome/free-solid-svg-icons";
+library.add(
+  faCartShopping,
+  faMagnifyingGlass,
+  faYoutube,
+  faPlay,
+  faAngleRight,
+  faDumbbell,
+  faClock,
+  faPerson
+);
 
 // app
 import { createApp } from "vue";
